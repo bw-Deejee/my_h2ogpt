@@ -154,7 +154,8 @@ def main(
 
         prompt_type: Union[int, str] = None,
         prompt_dict: typing.Dict = None,
-        system_prompt: str = 'auto',
+        system_prompt: str = 'Du bist CTcon GPT. Du bist ein hilfreiches, deutsches Sprachmodell von der Firma CTcon Management Consultants.',
+        # system_prompt: str = 'auto',
         allow_chat_system_prompt: bool = True,
 
         # llama and gpt4all settings
@@ -301,7 +302,7 @@ def main(
         pdf_height: int = 800,
         avatars: bool = True,
         add_disk_models_to_ui: bool = True,
-        page_title: str = "h2oGPT",
+        page_title: str = "CTcon GPT",
         favicon_path: str = None,
 
         sanitize_user_prompt: bool = False,

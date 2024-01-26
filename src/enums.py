@@ -128,7 +128,7 @@ class LangChainAction(Enum):
 
 # rest are not implemented fully
 base_langchain_actions = [LangChainAction.QUERY.value, LangChainAction.SUMMARIZE_MAP.value,
-                          LangChainAction.EXTRACT.value,
+                          # LangChainAction.EXTRACT.value,
                           LangChainAction.IMAGE_GENERATE.value,
                           LangChainAction.IMAGE_GENERATE_HIGH.value,
                           LangChainAction.IMAGE_CHANGE.value,

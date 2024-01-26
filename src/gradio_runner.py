@@ -867,8 +867,8 @@ def go_gradio(**kwargs):
                     if kwargs['actions_in_sidebar']:
                         max_quality = gr.Checkbox(label="Max Ingest Quality", value=kwargs['max_quality'],
                                                   visible=not is_public)
-                        gradio_upload_to_chatbot = gr.Checkbox(label="Add Doc to Chat",
-                                                               value=kwargs['gradio_upload_to_chatbot'])
+                        # gradio_upload_to_chatbot = gr.Checkbox(label="Add Doc to Chat",
+                        #                                        value=kwargs['gradio_upload_to_chatbot'])
                     url_text = gr.Textbox(label=url_label,
                                           # placeholder="Enter Submits",
                                           max_lines=1,
@@ -965,13 +965,14 @@ def go_gradio(**kwargs):
                     'large_file_count_mode']
                 row_doc_track = gr.Row(visible=visible_doc_track)
                 with row_doc_track:
-                    if kwargs['langchain_mode'] in langchain_modes_non_db:
-                        doc_counts_str = "Pure LLM Mode"
-                    else:
-                        doc_counts_str = "Name: %s\nDocs: Unset\nChunks: Unset" % kwargs['langchain_mode']
-                    text_doc_count = gr.Textbox(lines=3, label="Doc Counts", value=doc_counts_str,
-                                                visible=visible_doc_track)
-                    text_file_last = gr.Textbox(lines=1, label="Newest Doc", value=None, visible=visible_doc_track)
+                    # if kwargs['langchain_mode'] in langchain_modes_non_db:
+                    #     doc_counts_str = """Pure LLM Mode 
+                    #                         (No documents ingested yet)"""
+                    # else:
+                    #     doc_counts_str = "Name: %s\nDocs: Unset\nChunks: Unset" % kwargs['langchain_mode']
+                    # text_doc_count = gr.Textbox(lines=3, label="Doc Counts", value=doc_counts_str,
+                    #                             visible=visible_doc_track)
+                    text_file_last = gr.Textbox(lines=1, label="Newest Document", value=None, visible=visible_doc_track)
                     new_files_last = gr.Textbox(label="New Docs full paths as dict of full file names and content",
                                                 value='{}',
                                                 visible=False)
@@ -1041,7 +1042,7 @@ def go_gradio(**kwargs):
                                         attach_button = gr.UploadButton(
                                             elem_id="attach-button" if visible_upload else None,
                                             value=None,
-                                            label="Upload",
+                                            label="⏏️ Upload",
                                             size="sm",
                                             min_width=mw0,
                                             file_types=['.' + x for x in file_types],
@@ -1050,7 +1051,7 @@ def go_gradio(**kwargs):
                                         add_button = gr.Button(
                                             elem_id="add-button" if visible_upload and not kwargs[
                                                 'actions_in_sidebar'] else None,
-                                            value="Ingest",
+                                            value="⏺️ Ingest",
                                             size="sm",
                                             min_width=mw0,
                                             visible=visible_upload and not kwargs['actions_in_sidebar'])
