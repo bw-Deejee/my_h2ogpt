@@ -2508,7 +2508,7 @@ def go_gradio(**kwargs):
         get_sources_kwargs = dict(fn=get_sources1,
                                   inputs=[my_db_state, selection_docs_state, requests_state, langchain_mode,
                                           h2ogpt_key],
-                                  outputs=[file_source, docs_state, text_doc_count],
+                                  outputs=[file_source, docs_state],
                                   queue=queue)
 
         eventdb7a = get_sources_btn.click(user_state_setup,
