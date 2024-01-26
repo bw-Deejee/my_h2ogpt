@@ -5941,7 +5941,7 @@ def go_gradio(**kwargs):
                 load_event7 = load_event6.then(**viewable_kwargs)
 
     demo.queue(**queue_kwargs, api_open=kwargs['api_open'])
-    favicon_file = "h2o-logo.svg"
+    favicon_file = "ctcon-logo.svg"
     favicon_path = kwargs['favicon_path'] or favicon_file
     if not os.path.isfile(favicon_file):
         print("favicon_path1=%s not found" % favicon_file, flush=True)
