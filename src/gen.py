@@ -231,7 +231,7 @@ def main(
         show_examples: bool = None,
         verbose: bool = False,
         h2ocolors: bool = True,
-        dark: bool = False,  # light tends to be best
+        dark: bool = True,  # light tends to be best
         height: int = 600,
         render_markdown: bool = True,
         show_lora: bool = True,
