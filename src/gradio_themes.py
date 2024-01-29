@@ -207,7 +207,7 @@ def get_h2o_title(title, description, visible_h2ogpt_qrcode):
                     {description}
                 </div>
                 <div style="display:flex; justify-content:center; margin-bottom:30px; margin-right:330px;">
-                    <div style="height: 60px; width: 60px; margin-right:20px;">{h2o_logo}</div>
+                    <div style="height: 30px; width: 100px; margin-right:20px;">{h2o_logo}</div>
                     <h1 style="line-height:60px">{title}</h1>
                 </div>
                 """
